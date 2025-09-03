@@ -262,10 +262,9 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👨‍💻 Autor
 
-**Seu Nome**
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu Perfil](https://linkedin.com/in/seu-perfil)
-- Email: seu.email@exemplo.com
+**André Pereira Brito**
+- GitHub: [@Andre-Brito-py](https://github.com/seu-Andre-Brito-py)
+- Email: andescrita@gmail.com
 
 ## 🙏 Agradecimentos
 
