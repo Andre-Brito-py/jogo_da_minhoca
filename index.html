@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Minhoca - Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🐍 Jogo da Minhoca</h1>
+            <div class="game-info">
+                <div class="score-container">
+                    <span class="label">Pontuação:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="level-container">
+                    <span class="label">Nível:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="high-score-container">
+                    <span class="label">Recorde:</span>
+                    <span id="highScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <div class="game-overlay" id="startScreen">
+                <div class="overlay-content">
+                    <h2>🐍 Bem-vindo ao Jogo da Minhoca!</h2>
+                    <p>Use as setas do teclado ou WASD para controlar a minhoca</p>
+                    <div class="difficulty-selector">
+                        <h3>Escolha a Dificuldade:</h3>
+                        <button class="difficulty-btn" data-speed="150">Fácil</button>
+                        <button class="difficulty-btn active" data-speed="100">Médio</button>
+                        <button class="difficulty-btn" data-speed="70">Difícil</button>
+                    </div>
+                    <button id="startBtn" class="game-btn">Iniciar Jogo</button>
+                </div>
+            </div>
+
+            <div class="game-overlay" id="gameOverScreen" style="display: none;">
+                <div class="overlay-content">
+                    <h2>💀 Game Over!</h2>
+                    <p id="finalScore">Sua pontuação: 0</p>
+                    <p id="newRecord" style="display: none;">🎉 Novo Recorde!</p>
+                    <button id="restartBtn" class="game-btn">Jogar Novamente</button>
+                    <button id="menuBtn" class="game-btn secondary">Menu Principal</button>
+                </div>
+            </div>
+
+            <div class="game-overlay" id="pauseScreen" style="display: none;">
+                <div class="overlay-content">
+                    <h2>⏸️ Jogo Pausado</h2>
+                    <p>Pressione ESPAÇO para continuar</p>
+                    <button id="resumeBtn" class="game-btn">Continuar</button>
+                    <button id="pauseMenuBtn" class="game-btn secondary">Menu Principal</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-info">
+            <h3>Controles:</h3>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <span class="key">↑ ↓ ← →</span>
+                    <span class="description">Mover a minhoca</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">W A S D</span>
+                    <span class="description">Mover a minhoca</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">ESPAÇO</span>
+                    <span class="description">Pausar/Continuar</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">R</span>
+                    <span class="description">Reiniciar</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles Touch para Mobile -->
+        <div class="mobile-controls" id="mobileControls" style="display: none;">
+            <div class="control-pad">
+                <button class="control-btn up" data-direction="up">↑</button>
+                <div class="control-row">
+                    <button class="control-btn left" data-direction="left">←</button>
+                    <button class="control-btn pause" id="mobilePause">⏸️</button>
+                    <button class="control-btn right" data-direction="right">→</button>
+                </div>
+                <button class="control-btn down" data-direction="down">↓</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="game-footer">
+        <p>Desenvolvido com ❤️ | Use as setas ou WASD para jogar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
